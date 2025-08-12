@@ -3,8 +3,8 @@ import numpy as np
 import math
 import manim_helper as mh
 from syracuse_lang import t, LANG
-from syracuse_title_card import show_title_card  # optional
-
+from syracuse_title_card import show_title_card, make_quote  # optional
+import os
 
 # --- helpers ---
 def syracuse_sequence(u0, nmax=300, stop_at_cycle=True):
@@ -204,10 +204,27 @@ def _syracuse_draw_seq(
 # =============================
 class ShortsManual(mh.TextChaptersScene):
     def construct(self):
+    
+    
+    
         self.camera.background_color = mn.BLACK
         self.setup_layout()
-
-        # (optional) show_title_card(self, title=t("title"))
+        lang = os.getenv("SHORT_LANG", "FR")
+        
+        show_title_card(
+            self,
+            title_text=t("title"),
+            formula_tex=make_quote(
+                text=t("sentence13")["content"],
+                author="Paul Erdős",
+                lang=lang,
+                color="#FFD166",
+                scale=0.85),
+            logo_path="/Users/louisthibaut/Desktop/projects/math_video/logo/astramath.png",
+            u0_list=[7, 11, 3],
+            hold=2.0,
+        )
+        
 
         # --- Titre initial ---
         self.show_chapter(mh.ChapterText(title=t("title"), bottom_lines=[]))
@@ -238,9 +255,25 @@ class ShortsManual(mh.TextChaptersScene):
                 t("sentence05"),
                 t("sentence06"),
                 t("sentence07"),
+                t("sentence08"),
             ],
         )
         self.show_chapter(chap1)
+
+        chap2 = mh.ChapterText(
+            title=t("title"),
+            bottom_lines=[
+                t("sentence11"),
+                t("sentence12"),
+                t("sentence13"),
+                t("sentence14"),
+                t("sentence15"),
+                t("sentence16"),
+                t("sentence17"),
+                t("sentence18"),
+            ],
+        )
+        self.show_chapter(chap2)
 
         # CTA
         cta = mn.Text(t("cta_sub"), color=mn.RED).scale(0.5)
