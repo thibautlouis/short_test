@@ -1,4 +1,3 @@
-# manim_helper.py
 import manim as mn
 import numpy as np
 
@@ -136,7 +135,35 @@ class TextChaptersScene(mn.Scene):
 
         self._render_bottom_with_pagination(chap.bottom_lines)
 
-    def clear_text(self, clear_figure=False):
+    def clear_text(self, clear_figure: bool = False, bottom_only: bool = False):
+        """
+        Efface les éléments de texte.
+        - Par défaut : efface le titre + le bas, et la figure si `clear_figure=True`.
+        - Si `bottom_only=True` : n'efface QUE le texte du bas (ignore titre et figure).
+        """
+        # 1) Quoi effacer ?
+        names = ["_bottom_page_current", "_chap_bottom_page_current"] if bottom_only else [
+            "_title_current", "_bottom_page_current", "_chap_bottom_page_current"
+        ]
+        if not bottom_only and clear_figure:
+            names.append("_center_group")
+
+        # 2) Collecter les mobjects présents
+        items = [(name, getattr(self, name, None)) for name in names]
+        items = [(name, mob) for name, mob in items if mob is not None]
+        if not items:
+            return
+
+        # 3) Animer la disparition
+        anims = [mn.FadeOut(mob, shift=mn.UP*0.05) for _, mob in items]
+        self.play(*anims, run_time=self.T_FADE)
+
+        # 4) Nettoyage (retirer de la scène + remettre les refs à None)
+        self.remove(*[mob for _, mob in items])
+        for name, _ in items:
+            setattr(self, name, None)
+
+    def clear_text_old(self, clear_figure=False, bottom_only=False):
         anims = []
         if getattr(self, "_title_current", None) is not None:
             anims.append(mn.FadeOut(self._title_current, shift=mn.UP*0.05))
@@ -207,12 +234,29 @@ class TextChaptersScene(mn.Scene):
 
             write_rt = getattr(m, "_line_opts", {}).get("write_rt", self.T_WRITE)
             self.play(mn.Write(m), run_time=write_rt)
-            pause_time = getattr(m, "_line_opts", {}).get("pause", self.T_PAUSE)
-            self.wait(pause_time)
-
+            
+            # --- New: fine-grained pause control ---
+            _opts = getattr(m, "_line_opts", {})
+            pause_before = _opts.get("pause_before", None)
+            pause_after  = _opts.get("pause_after", None)
+            pause_legacy = _opts.get("pause", None)  # kept for backward-compatibility
+            
+            # Optional pause BEFORE any animation
+            if pause_before is not None:
+                self.wait(pause_before)
+            
             anim_fn = getattr(m, "_line_opts", {}).get("anim", None)
             if callable(anim_fn):
                 anim_fn(self, m)
+            
+            # Default behavior:
+            # - If an animation exists, apply 'pause' AFTER the animation.
+            # - If no animation, 'pause' behaves as before (after the write).
+            if pause_after is not None:
+                self.wait(pause_after)
+            elif pause_legacy is not None:
+                self.wait(pause_legacy)
+            else:
+                self.wait(self.T_PAUSE)
 
         self._bottom_page_current = page_group
-

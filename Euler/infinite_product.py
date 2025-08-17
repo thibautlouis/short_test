@@ -56,7 +56,7 @@ class ShortsManual(mh.TextChaptersScene):
         chap1 = mh.ChapterText(
             title=t("title"),
             bottom_lines=[t("preamble"),
-                         {"type": "math", "content":  t("poly_fact"), "pause": 4},
+                         {"type": "math", "content":  t("poly_fact"), "pause": 2},
                          t("ex1"),
                          t("ex2")])
                          
@@ -76,9 +76,9 @@ class ShortsManual(mh.TextChaptersScene):
             t("so_write"),
             {"type": "math",
              "content":  t("sin_prod_1")},
-            {"type": "text", "content":  t("each_factor"), "pause": 4},
+            {"type": "text", "content":  t("each_factor"), "pause": 2},
             t("pairing"),
-            {"type": "math", "content": t("sin_prod_2"), "pause": 4 },
+            {"type": "math", "content": t("sin_prod_2"), "pause": 2 },
             ("math", t("const_one")),
             ("math", t("final_prod"),  {"color": "#FFD700"}),
            ],

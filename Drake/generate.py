@@ -1,4 +1,4 @@
-# e.g python generate.py syracuse --music_path /Users/louisthibaut/Desktop/projects/math_video/Music/blue_sea.mp3
+# e.g python generate.py drake --music_path /Users/louisthibaut/Desktop/projects/math_video/Music/Kyoto.mp3
 
 import os
 import sys

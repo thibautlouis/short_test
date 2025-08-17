@@ -99,10 +99,10 @@ TEXT = {
         "PT": r"\sin x = x\prod_{n=1}^{\infty}\left(1-\frac{x^2}{n^2\pi^2}\right)",
     },
     "cta_sub": {
-        "FR": "Explorez plus de maths et de physique — abonnez-vous !",
-        "EN": "Explore more math and physics — subscribe!",
-        "ES": "Explora más matemáticas y física — ¡suscríbete!",
-        "PT": "Explore mais matemática e física — inscreva-se!",
+        "FR": "Explorez plus de maths et d’astrophysique — abonnez-vous !",
+        "EN": "Explore more math and astrophysics — subscribe!",
+        "ES": "Explora más matemáticas y astrofísica — ¡suscríbete!",
+        "PT": "Explore mais matemática e astrofísica — inscreva-se!",
     },
 }
 

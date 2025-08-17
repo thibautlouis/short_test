@@ -1,4 +1,4 @@
-# e.g python generate.py syracuse --music_path /Users/louisthibaut/Desktop/projects/math_video/Music/blue_sea.mp3
+# e.g python generate.py expansion --music_path /Users/louisthibaut/Desktop/projects/math_video/Music/Kyoto.mp3
 
 import os
 import sys
@@ -156,7 +156,7 @@ def render_title_card(slug: str, lang: str) -> Path:
     out_png_path = THUMBS_DIR / out_png_name
 
     cmd = [
-        "./manim", "-qk", "-s",
+        "./manim", "-qk",
         f"{slug}_title_card.py", "TitleCard",
         "--media_dir", str(THUMBS_DIR),
         "--custom_folders",             # pas de sous-dossiers images/<script>

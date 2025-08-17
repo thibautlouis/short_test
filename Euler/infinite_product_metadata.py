@@ -6,10 +6,10 @@ TITLES = {
 }
 
 DESCR = {
-    "FR": "Découvrez comment Euler transforme sin(x) en produit infini — idée clé liée à la série de Bâle.\n🔔 Explorez plus de maths et de physique — abonnez-vous !",
-    "EN": "Discover how Euler turns sin(x) into an infinite product — a key idea linked to the Basel problem.\n🔔 Explore more math and physics — subscribe!",
-    "ES": "Descubre cómo Euler convierte sin(x) en un producto infinito — idea clave vinculada al problema de Basilea.\n🔔 ¡Explora más matemáticas y física — suscríbete!",
-    "PT": "Descubra como Euler transforma sin(x) em um produto infinito — ideia-chave ligada ao problema de Basileia.\n🔔 Explore mais matemática e física — inscreva-se!",
+    "FR": "Découvrez comment Euler transforme sin(x) en produit infini — idée clé liée à la série de Bâle.\n🔔 Explorez plus de maths et d’astrophysique — abonnez-vous !",
+    "EN": "Discover how Euler turns sin(x) into an infinite product — a key idea linked to the Basel problem.\n🔔 Explore more math and astrophysics — subscribe!",
+    "ES": "Descubre cómo Euler convierte sin(x) en un producto infinito — idea clave vinculada al problema de Basilea.\n🔔 ¡Explora más matemáticas y astrofísica — suscríbete!",
+    "PT": "Descubra como Euler transforma sin(x) em um produto infinito — ideia-chave ligada ao problema de Basileia.\n🔔 Explore mais matemática e astrofísica — inscreva-se!",
 }
 
 HASHTAGS = {
