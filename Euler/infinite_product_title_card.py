@@ -1,5 +1,6 @@
 from manim import *
 from manim_helper import *
+from infinite_product_lang import t
 
 BG = BLACK
 GOLD = "#FFD700"
@@ -51,7 +52,7 @@ class TitleCard(Scene):
     def construct(self):
         self.camera.background_color = BLACK
         g = build_title_card_group(
-            title_text="Produit infini d’Euler",  # ou t("title") si tu veux
+            title_text=t("title"),  # ou t("title") si tu veux
             formula_tex=r"\sin x = x \prod_{n=1}^{\infty}\left(1-\frac{x^2}{n^2\pi^2}\right)",
             logo_path="/Users/louisthibaut/Desktop/projects/math_video/logo/astramath.png",
         )
