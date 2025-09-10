@@ -118,19 +118,19 @@ TEXT = {
         "FR": "L’expansion de l’Univers apparaît accélérée ce qui",
         "EN": "The Universe seems to be expanding faster and faster, ",
         "ES": "El Universo parece expandirse cada vez más rápido, ",
-        "PT": "O Universo parece estar se expandindo cada vez mais rápido, ",
+        "PT": "O Universo se expande cada vez mais rápido, ",
     },
     "sentence44": {
         "FR": "suggère qu’une partie de son énergie est",
         "EN": "which suggests that part of its energy exists",
         "ES": "lo que sugiere que parte de su energía está",
-        "PT": "o que sugere que parte da sua energia está",
+        "PT": "o que sugere que parte da sua energia existe",
     },
     "sentence45": {
         "FR": "sous une forme mystérieuse qu’on appelle l’énergie sombre.",
         "EN": "in a mysterious form we call dark energy.",
         "ES": "en una forma misteriosa que llamamos energía oscura.",
-        "PT": "em uma forma misteriosa que chamamos de energia escura.",
+        "PT": "numa forma misteriosa que chamamos de energia escura.",
     },
     "cta_sub": {
         "FR": "Explorez plus de maths et d’astrophysique — abonnez-vous !",
