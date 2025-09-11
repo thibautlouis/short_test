@@ -39,8 +39,8 @@ class ShortsDoppler(mh.TextChaptersScene):
         
         img = ImageMobject("export_frames_static/frame_00000.png") # ton image
         center=self.anim_zone.get_center(),
-        max_w=self.anim_zone.width * pad,
-        max_h=self.anim_zone.height * pad,
+        max_w=self.anim_zone.width * 1.2,
+        max_h=self.anim_zone.height *  1.2,
 
         s = min(max_w / img.width, max_h / img.height)
         img = img.scale(s)
@@ -67,8 +67,8 @@ class ShortsDoppler(mh.TextChaptersScene):
             pattern="export_frames_static/frame_*.png",
             fps=20,
             center=self.anim_zone.get_center(),
-            max_w=self.anim_zone.width * pad,
-            max_h=self.anim_zone.height * pad,
+            max_w=self.anim_zone.width *  1.2,
+            max_h=self.anim_zone.height *  1.2,
             loop=False,
             autoplay=False,
             z=5,
@@ -90,8 +90,8 @@ class ShortsDoppler(mh.TextChaptersScene):
             pattern="export_frames/frame_*.png",
             fps=20,
             center=self.anim_zone.get_center(),
-            max_w=self.anim_zone.width * pad,
-            max_h=self.anim_zone.height * pad,
+            max_w=self.anim_zone.width *  1.2,
+            max_h=self.anim_zone.height *  1.2,
             loop=False,
             autoplay=False,
             z=5,
@@ -114,8 +114,8 @@ class ShortsDoppler(mh.TextChaptersScene):
             pattern="export_frames/frame_*.png",
             fps=20,
             center=self.anim_zone.get_center(),
-            max_w=self.anim_zone.width * pad,
-            max_h=self.anim_zone.height * pad,
+            max_w=self.anim_zone.width *  1.2,
+            max_h=self.anim_zone.height *  1.2,
             loop=False,
             autoplay=False,
             z=5,
