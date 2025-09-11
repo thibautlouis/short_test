@@ -6,6 +6,7 @@ import os
 import manim_helper as mh
 from imo_lang import t, LANG
 from imo_title_card import show_imo_title_card
+from manim import Tex, MathTex, TexTemplate
 
 # ---------- Config vidéo (9:16) ----------
 mn.config.frame_width  = 9
@@ -13,6 +14,12 @@ mn.config.frame_height = 16
 mn.config.pixel_width  = 1080
 mn.config.pixel_height = 1920
 BG  = mn.BLACK
+
+tex = TexTemplate()
+tex.add_to_preamble(r"\usepackage{amsmath}")  # utile si tu utilises aligned ailleurs
+tex.add_to_preamble(r"\usepackage{xcolor}")   # nécessaire pour \textcolor / \color
+Tex.set_default(tex_template=tex)
+MathTex.set_default(tex_template=tex)
 
 
 class ShortsManual(mh.TextChaptersScene):
@@ -108,16 +115,14 @@ class ShortsManual(mh.TextChaptersScene):
             title=t("title"),
             bottom_lines=[
                 t("sentence31"),
-                t("sentence32"),
-                {"type": "text", "content":  t("sentence33"), "pause": 3},
-                t("sentence34"),
-                {"type": "text", "content":  t("sentence35"), "pause": 3},
-                t("sentence36"),
-
+                {"type": "text", "content":  t("sentence32"), "pause": 3},
+                t("sentence33"),
+                {"type": "text", "content":  t("sentence34"), "pause": 2},
+                t("sentence35"),
             ],
         )
         self.show_chapter(chap4)
-        self.wait(3)
+        self.wait(4)
 
 
         chap5 = mh.ChapterText(

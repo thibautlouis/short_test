@@ -70,10 +70,10 @@ TEXT = {
         "PT": r"Onde $i$ é a taxa mensal: $i = \dfrac{\text{taxa anual}}{12} = 0,25\%$.",
     },
     "sentence16": {
-        "FR": r"le $12^{\rm eme}$ mois, elle vaudra $\dfrac{M}{(1+i)^{12}}$.",
-        "EN": r"By the 12th month, it will be worth $\dfrac{M}{(1+i)^{12}}$.",
-        "ES": r"En el mes 12, valdrá $\dfrac{M}{(1+i)^{12}}$.",
-        "PT": r"No 12º mês, valerá $\dfrac{M}{(1+i)^{12}}$.",
+        "FR": r"Au $24^{\text{e}}$ mois, elle vaudra $\dfrac{M}{(1+i)^{24}} = 0.94 \ $M.",
+        "EN": r"By the 24th month, it will be worth $\dfrac{M}{(1+i)^{24}} = 0.94 \ $M.",
+        "ES": r"En el 24º mes, valdrá $\dfrac{M}{(1+i)^{24}} = 0.94 \ $M.",
+        "PT": r"No 24º mês, valerá $\dfrac{M}{(1+i)^{24}} = 0.94 \ $M.",
     },
 
     # ----- Chapitre 3 -----
@@ -121,29 +121,53 @@ TEXT = {
         "PT": r"Reconhecemos uma série geométrica da forma $\sum_{k=1}^{N} q^{k}$.",
     },
     "sentence33": {
-        "FR": r"Avec $q = \dfrac{1}{1+i}$.",
-        "EN": r"With $q = \dfrac{1}{1+i}$.",
-        "ES": r"Con $q = \dfrac{1}{1+i}$.",
-        "PT": r"Com $q = \dfrac{1}{1+i}$.",
-    },
-    "sentence34": {
         "FR": "On peut alors utiliser la formule bien connue :",
         "EN": "We can then use the well-known formula:",
         "ES": "Entonces podemos usar la fórmula conocida:",
         "PT": "Podemos então usar a fórmula conhecida:",
     },
-    "sentence35": {
+    "sentence34": {
         "FR": r"$\sum_{k=1}^{N} q^{k} = \dfrac{q(1 - q^{N})}{1-q}$.",
         "EN": r"$\sum_{k=1}^{N} q^{k} = \dfrac{q(1 - q^{N})}{1-q}$.",
         "ES": r"$\sum_{k=1}^{N} q^{k} = \dfrac{q(1 - q^{N})}{1-q}$.",
         "PT": r"$\sum_{k=1}^{N} q^{k} = \dfrac{q(1 - q^{N})}{1-q}$.",
     },
-    "sentence36": {
-        "FR": r"Ainsi $200000 \text{€} = M \times \dfrac{1 - (1+i)^{-240}}{i}$.",
-        "EN": r"So $ \text{£} 200{,}000 = M \times \dfrac{1 - (1+i)^{-240}}{i}$.",
-        "ES": r"Así $200 000 \text{€}= M \times \dfrac{1 - (1+i)^{-240}}{i}$.",
-        "PT": r"Assim $200 000 \text{€}= M \times \dfrac{1 - (1+i)^{-240}}{i}$.",
+  #  "sentence36": {
+  #      "FR": r"Ainsi $200000 \text{€} = M \times \dfrac{1 - (1+i)^{-240}}{i}$.",
+  #      "EN": r"So $ \text{£} 200{,}000 = M \times \dfrac{1 - (1+i)^{-240}}{i}$.",
+  #      "ES": r"Así $200 000 \text{€}= M \times \dfrac{1 - (1+i)^{-240}}{i}$.",
+  #      "PT": r"Assim $200 000 \text{€}= M \times \dfrac{1 - (1+i)^{-240}}{i}$.",
+  #  },
+    
+    "sentence35": {
+        "FR": r"""$
+            \begin{array}{rcl}
+                200000 \text{€} &=& M \times \dfrac{1 - (1+i)^{-240}}{i}\\
+                        &=& M \times \dfrac{1 - (1+0.25 \%)^{-240}}{0.25 \%}.
+            \end{array}$
+        """,
+        "EN": r"""$
+            \begin{array}{rcl}
+                \text{£}200000  &=& M \times \dfrac{1 - (1+i)^{-240}}{i}\\
+                        &=& M \times \dfrac{1 - (1+0.25 \%)^{-240}}{0.25 \%}.
+            \end{array}$
+        """,
+        "ES": r"""$
+            \begin{array}{rcl}
+                200000 \text{€} &=& M \times \dfrac{1 - (1+i)^{-240}}{i}\\
+                        &=& M \times \dfrac{1 - (1+0.25 \%)^{-240}}{0.25 \%}.
+            \end{array}$
+        """,
+        "PT": r"""$
+            \begin{array}{rcl}
+                200000 \text{€} &=& M \times \dfrac{1 - (1+i)^{-240}}{i}\\
+                        &=& M \times \dfrac{1 - (1+0.25 \%)^{-240}}{0.25 \%}.
+            \end{array}$
+        """,
     },
+
+
+
 
     # ----- Chapitre 4 -----
     "sentence41": {
