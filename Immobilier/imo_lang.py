@@ -189,11 +189,24 @@ TEXT = {
         "PT": r"O custo total do empréstimo é então $240 \times M \approx 266\,207 \,\text{€}$.",
     },
     "sentence44": {
-        "FR": r"pour $2\%$, $M= 1 012 \text{€} $  et pour $4\%$, $M = 1212 \text{€} $ .",
-        "EN": r"For $2\%$, $M = \text{£}1{,}012$; for $4\%$, $M = \text{£}1{,}212$.",
-        "ES": r"Para un $2\%$, $M = 1 012 \,\text{€}$; para un $4\%$, $M = 1 212 \,\text{€}$.",
-        "PT": r"Para $2\%$, $M = 1 012 \,\text{€}$; para $4\%$, $M = 1 212 \,\text{€}$.",
+        "FR": "empty.",
+        "EN": "empty.",
+        "ES": "empty.",
+        "PT": "empty.",
     },
+    "sentence45": {
+        "FR": r"Pour un taux d'intérêt annuel de $2\%$, $M = 1 012 \text{€}$,",
+        "EN": r"For an annual interest rate of $2\%$, $M = \text{£}1{,}012$,",
+        "ES": r"Para una tasa de interés anual del $2\%$, $M = 1 012 \,\text{€}$,",
+        "PT": r"Para uma taxa de juros anual de $2\%$, $M = 1 012 \,\text{€}$,",
+    },
+    "sentence46": {
+        "FR": r"et pour $4\%$, $M = 1 212 \text{€}$.",
+        "EN": r"and for $4\%$, $M = \text{£}1{,}212$.",
+        "ES": r"y para un $4\%$, $M = 1 212 \,\text{€}$.",
+        "PT": r"e para $4\%$, $M = 1 212 \,\text{€}$.",
+    },
+
 
     "cta_sub": {
         "FR": "Explorez plus de maths et d’astrophysique — abonnez-vous !",

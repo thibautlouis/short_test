@@ -131,8 +131,9 @@ class ShortsManual(mh.TextChaptersScene):
                 t("sentence41"),
                 {"type": "text", "content":  t("sentence42"), "pause": 3},
                 t("sentence43"),
-                t("sentence44"),
-
+                ("text", t("sentence44"), {"color": (0, 0, 0, 0)}),
+                t("sentence45"),
+                t("sentence46"),
             ],
         )
         self.show_chapter(chap5)
